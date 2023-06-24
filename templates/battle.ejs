@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<link href= "/templates/assets/battle.css" rel="stylesheet" type="text/css" />
+<head>
+	<meta charset="utf-8" />
+	<title>Battle Simulator</title>
+</head>
+
+<body style = "background-color: aquamarine">
+	<h1 style="margin-left: 20px; text-align: center;">Pick Two Pokemon to Battle</h1>
+	<%- form %>
+		<fieldset>
+            <div id = "battle">
+                <div id = "pokemonOne"><label><strong>Pokemon 1: </strong><input type="text" name="pokemon1"/></label><br><br></div>
+                <input id = "button" type="submit" value="BATTLE!"/> <br><br>
+                <div id = "pokemonTwo"><label><strong>Pokemon 2: </strong><input type="text" name="pokemon2"/></label><br><br></div>
+            </div>
+		</fieldset>
+		<br>
+		
+		<script>
+			
+			window.onsubmit = function() {
+                let val = confirm("Are you sure you want to submit your application?\nYou will not be able to change you information once submitted"); 
+                if (!val) { 
+                    event.preventDefault(); 
+                    return false;
+                }
+                else {
+                    return true;
+                }
+			} 
+		</script>
+	</form>
+    <hr>
+    <%- home %>
+</body>
+
+</html>

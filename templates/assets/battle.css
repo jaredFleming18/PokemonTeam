@@ -1,0 +1,25 @@
+#pokemonOne {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#pokemonTwo {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#battle {
+    text-align: center;
+}
+#button {
+    width: 300px;
+    height: 150px;
+    background-color: red;
+    border-radius: 12px;
+    font-size: 50px;
+}
+input {
+    width: 1000px;
+    height: 75px;
+    font-size: 50px;
+}

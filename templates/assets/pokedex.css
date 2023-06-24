@@ -1,0 +1,27 @@
+img {
+    width: 420px;
+    height: 420px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+#center {
+   margin-left: 30%;
+}
+#pokemon {
+    margin-left: 22.5%;
+    height: 60px;
+    width: 150px;
+    font-size: 40px;
+    text-align: center;
+}
+button {
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+}
+body {
+    background-image: url("/templates/assets/battleBack.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}

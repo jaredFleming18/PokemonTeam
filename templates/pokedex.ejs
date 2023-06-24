@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<link href= "/templates/assets/pokedex.css" rel="stylesheet" type="text/css" />
+<head>
+	<meta charset="utf-8" />
+	<title>Pokedex</title>
+</head>
+
+<body style = "background-color: aquamarine">
+	<h1 style="margin-left: 20px; text-align: center;">Pick a Number from the Pokedex</h1>
+    <div id = "center">
+        <img src = "/templates/assets/pokeball2.png" id = "image"><br><br>
+        <div id = "name"></div> <br><br>
+        <input type="text" id="pokemon">
+        <button onclick="processInput()">Submit</button>
+    </div>
+    <hr>
+    <%- home %>
+</body>
+
+</html>
+<script>
+    function processInput() {
+        let input = Number(document.getElementById('pokemon').value);
+        console.log("hey")
+        sendData()
+        async function getData(num) {
+            let url = "https://pokeapi.co/api/v2/pokemon/"
+            url = url + num + "/"
+            const response = await fetch(url);
+            const result = await (response.text());
+            let obj = JSON.parse(result)
+            return obj;
+        }
+        async function sendData () {
+            try {
+                const pokeObj1 = await getData(input);
+                let image = document.getElementById('image');
+                image.src = pokeObj1.sprites.front_shiny
+                let name = document.getElementById('name');
+                name.innerHTML = `<h1 id = "name" style = "margin-left: 260px">${pokeObj1.name.toUpperCase()}</h1>`
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }
+</script>

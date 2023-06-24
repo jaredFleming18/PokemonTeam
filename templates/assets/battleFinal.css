@@ -1,0 +1,12 @@
+img {
+    width: 420px;
+    height: 420px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+body {
+    background-image: url("/templates/assets/battleBack.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}

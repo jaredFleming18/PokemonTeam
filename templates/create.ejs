@@ -1,0 +1,44 @@
+<!-- DO NOT MODIFY THIS FILE -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Application</title>
+</head>
+
+
+<body style = "background-color: aquamarine">
+	<h1 style="margin-left: 20px;">Create Your Roster</h1>
+	<%- form %>
+		<fieldset>
+			<label><strong>Team Name: </strong><input type="text" name="name"/></label> <br><br>
+			<label><strong>Pokemon 1: </strong><input type="text" name="pokemon1"/></label><br><br>
+			<label><strong>Pokemon 2: </strong><input type="text" name="pokemon2"/></label><br><br>
+			<label><strong>Pokemon 3: </strong><input type="text" name="pokemon3"/></label><br><br>
+			<label><strong>Pokemon 4: </strong><input type="text" name="pokemon4"/></label><br><br>
+			<label><strong>Pokemon 5: </strong><input type="text" name="pokemon5"/></label><br><br>
+			<label><strong>Pokemon 6: </strong><input type="text" name="pokemon6"/></label>
+		</fieldset>
+		<br>
+		<input type="reset" />
+		<input type="submit" value="Create Roster"/>
+		<script>
+			
+			window.onsubmit = function() {
+                let val = confirm("Are you sure you want to submit your application?\nYou will not be able to change you information once submitted"); 
+                if (!val) { 
+                    event.preventDefault(); 
+                    return false;
+                }
+                else {
+                    return true;
+                }
+			} 
+		</script>
+	</form>
+    <hr>
+    <%- home %>
+</body>
+
+</html>
